@@ -12,7 +12,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     features = [float(x) for x in request.form.values()]
     final_features = [np.array(features)]
