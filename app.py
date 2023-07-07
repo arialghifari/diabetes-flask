@@ -19,9 +19,9 @@ def predict():
     prediction = model.predict(final_features)
     output = prediction[0]
     if output == 1:
-        return render_template('index.html', prediction_text='The person is likely to have diabetes.')
+        return render_template('index.html', prediction_text='Kemungkinan bisa terkena diabetes.')
     else:
-        return render_template('index.html', prediction_text='The person is not likely to have diabetes.')
+        return render_template('index.html', prediction_text='Kemungkinan tidak terkena diabetes.')
 
 if __name__ == '__main__':
     app.run(debug=True)
